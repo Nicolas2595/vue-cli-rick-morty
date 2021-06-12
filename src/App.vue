@@ -1,28 +1,43 @@
 <template>
+
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <Header />
+   <main>
+        <CharactersList />
+   </main>
   </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Header from '../src/components/Header';
+import CharactersList from '../src/components/CharactersList';
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    CharactersList
   }
 }
+
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+@import '~bootstrap/scss/bootstrap';
+
+@import "~@fontsource/roboto/index.css";
+@import "~@fontsource/roboto/700.css";
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
+
+main {
+  background-color: #22b4cf;
+}
+
 </style>
